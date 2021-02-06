@@ -1,0 +1,131 @@
+/* Variable Definition */
+:root {
+  --left-slide-overlay-bg: rgba(73, 6, 26, 0.75);
+  --right-slide-overlay-bg: rgba(51, 44, 46, 0.85);
+  --preview-txt-color: #fff;
+  --hovered-side-width: 75%;
+  --opposite-side-width: 25%;
+}
+
+/* Reset */
+* {
+  box-sizing: border-box;
+}
+
+/* Content */
+body {
+  font-family: "Merriweather", sans-serif;
+  width: 100vw;
+  /* min-height: 100vh; */
+  margin: 0;
+}
+
+.slide-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+}
+
+.slide {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 50%;
+  height: 100%;
+  position: absolute;
+}
+
+.slide.left {
+  background-color: var(--left-slide-overlay-bg);
+  background-blend-mode: overlay;
+  background-image: url(/img/red.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  left: 0;
+}
+
+/* .slide.left::before {
+  content: "";
+  background-color: var(--left-slide-overlay-bg);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 0;
+} */
+
+.slide.right {
+  background-image: url(/img/cream.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: var(--right-slide-overlay-bg);
+  background-blend-mode: overlay;
+  right: 0;
+}
+
+.slide.left,
+.slide.right {
+  transition: all 0.3s;
+}
+
+/* .slide.right::before {
+  content: "";
+  background-color: var(--right-slide-overlay-bg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+} */
+
+.hovered-left .left {
+  width: var(--hovered-side-width);
+}
+
+.hovered-left .right {
+  width: var(--opposite-side-width);
+}
+
+.hovered-right .left {
+  width: var(--opposite-side-width);
+}
+
+.hovered-right .right {
+  width: var(--hovered-side-width);
+}
+
+.slide-text {
+  width: 90%;
+  text-align: center;
+}
+
+.preview-header {
+  color: var(--preview-txt-color);
+  font-size: 3rem;
+  margin-bottom: 2rem;
+}
+
+.preview-link {
+  border: 1px solid var(--preview-txt-color);
+  border-radius: 30px;
+  color: var(--preview-txt-color);
+  text-decoration: none;
+  padding: 0.7rem 1rem;
+}
+
+.preview-link:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 700px) {
+  .preview-header {
+    font-size: 2rem;
+  }
+
+  .preview-link {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+  }
+}
