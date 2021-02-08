@@ -7,6 +7,9 @@
   --opposite-side-width: 25%;
 
   --header-color: #b20877;
+  --section-faint-color: #f79bc93a;
+
+  --border-radius: 30px;
 }
 
 /* Reset */
@@ -24,23 +27,40 @@ li {
   list-style: none;
 }
 
+img {
+  width: 100%;
+}
+
 /* Content */
 body {
   font-family: "Merriweather", sans-serif;
   width: 100vw;
-  /* min-height: 100vh; */
   margin: 0;
 }
 
+.content-wrapper {
+  width: 80%;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+  width: 100%;
+}
+
 /* Navigation */
+.header {
+  width: 100%;
+}
+
 .header-top {
   background-color: var(--header-color);
   color: var(--preview-txt-color);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 12vh;
-  padding: 10px;
+  /* height: 12vh; */
+  padding: 18px;
   position: relative;
   width: 100%;
 }
@@ -59,7 +79,7 @@ body {
 .navigation.mobile-nav {
   background-color: var(--header-color);
   position: absolute;
-  top: 12vh;
+  top: 75px;
   left: 0;
   width: 100%;
   z-index: 5;
@@ -82,7 +102,7 @@ body {
 }
 
 .nav-link:hover {
-  opacity: 0.8;
+  color: #f79bc9;
 }
 
 .hamburger {
@@ -96,6 +116,30 @@ body {
 
 .ham-close {
   font-size: 33px;
+}
+
+/* Trending Headline */
+.trending-text {
+  background-color: rgb(143, 9, 49);
+  color: var(--preview-txt-color);
+  text-align: center;
+  width: 100%;
+  padding: 10px 0;
+}
+
+.trend-brief {
+  border: 1px solid var(--preview-txt-color);
+  border-radius: var(--border-radius);
+  font-size: 16px;
+  display: inline;
+  padding: 2px 15px;
+  letter-spacing: 1px;
+}
+
+span.hot {
+  color: #f79bc9;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 /* Landing Section */
@@ -168,7 +212,7 @@ body {
 
 .preview-link {
   border: 1px solid var(--preview-txt-color);
-  border-radius: 30px;
+  border-radius: var(--border-radius);
   color: var(--preview-txt-color);
   text-decoration: none;
   padding: 0.7rem 1rem;
@@ -176,6 +220,102 @@ body {
 
 .preview-link:hover {
   opacity: 0.8;
+}
+
+/* Trending Section */
+.section-heading {
+  border-bottom: 3px solid var(--header-color);
+  font-size: 42px;
+  font-weight: 700;
+  padding: 3px 12px;
+  margin: 0 auto 1rem;
+  text-align: center;
+  letter-spacing: 2px;
+  width: 250px;
+}
+
+.section-subheading {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 3rem;
+  line-height: 1.3;
+  text-align: center;
+}
+
+.trending-product {
+  background-color: #f79bc918;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "intro desc desc";
+  grid-gap: 40px;
+  padding-bottom: 0.2rem;
+  margin-bottom: 2rem;
+}
+
+.trending-product .intro {
+  grid-area: intro;
+}
+
+.trending-product .description {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-area: desc;
+  padding: 0 1rem;
+}
+
+.intro-img {
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.intro-img img {
+  height: 250px;
+}
+
+.intro-name {
+  font-size: 14px;
+  text-align: center;
+}
+
+span.price {
+  background-color: var(--header-color);
+  color: var(--preview-txt-color);
+  position: absolute;
+  padding: 4px 6px;
+  right: 0;
+  bottom: 5px;
+}
+
+/* Products Section */
+.section-products {
+  background-color: var(--section-faint-color);
+}
+
+.section-subheading.products {
+  font-weight: 500;
+  letter-spacing: 1px;
+  margin-bottom: 1rem;
+}
+
+.section__small-heading {
+  text-align: center;
+}
+
+.products-collection {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+  grid-gap: 40px;
+  padding: 2rem;
+}
+
+.each-img img {
+  height: 300px;
+}
+
+/* Partners Section */
+.section-heading.partners {
+  width: 340px;
 }
 
 /* Media Queries */
@@ -255,10 +395,41 @@ body {
     font-size: 10px;
     padding: 0.3rem 0.6rem;
   }
+
+  .section-heading {
+    font-size: 32px;
+    width: 205px;
+  }
+
+  .section-subheading {
+    font-size: 18px;
+  }
+
+  .trending-product {
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas: "intro desc";
+    grid-gap: 20px;
+  }
+
+  .intro-img img {
+    height: 200px;
+  }
+
+  .description p.desc-text {
+    font-size: 13px;
+  }
+
+  .products-collection {
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  }
 }
 
 @media (max-width: 480px) {
   .preview-header {
     font-size: 20px;
+  }
+
+  .content-wrapper {
+    width: 90%;
   }
 }
