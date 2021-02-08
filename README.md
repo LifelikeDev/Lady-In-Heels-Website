@@ -1,4 +1,4 @@
-# Lady InHeels Website
+# Lady In Heels Website
 
 A website for Lady In Heels Company.
 
