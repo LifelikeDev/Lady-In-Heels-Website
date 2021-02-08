@@ -34,7 +34,7 @@ img {
 /* Content */
 body {
   font-family: "Merriweather", sans-serif;
-  width: 100vw;
+  /* width: 100vw; */
   margin: 0;
 }
 
@@ -554,7 +554,7 @@ span.price {
   }
 
   .about-logo img {
-    height: 180px;
+    height: 120px;
   }
 }
 
@@ -584,6 +584,10 @@ span.price {
   }
 
   .trending-product {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "intro"
+      "desc";
     grid-gap: 5px;
   }
 
@@ -596,6 +600,11 @@ span.price {
     grid-gap: 20px;
   }
 
+  span.price {
+    font-size: 14px;
+    padding: 3px 5px;
+  }
+
   .intro-img img {
     height: 175px;
   }
@@ -606,5 +615,9 @@ span.price {
 
   .partner-logo i {
     font-size: 36px;
+  }
+
+  .about-para {
+    font-size: 16px;
   }
 }
