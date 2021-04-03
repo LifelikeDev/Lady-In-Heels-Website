@@ -6,3 +6,5 @@ This was built with
 - HTML
 - CSS and 
 - JavaScript 
+
+Find the live site deployed [here](https://www.lady-in-heels.netlify.app)
