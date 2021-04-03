@@ -7,4 +7,4 @@ This was built with
 - CSS and 
 - JavaScript 
 
-Find the live site deployed [here](https://www.lady-in-heels.netlify.app)
+Find the live site deployed [here](https://lady-in-heels.netlify.app)
