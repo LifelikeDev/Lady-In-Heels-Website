@@ -124,7 +124,7 @@ section {
 
 /* Trending Headline */
 .trending-text {
-  background-color: rgb(143, 9, 49);
+  background-color: rgb(134, 54, 74);
   color: var(--preview-txt-color);
   text-align: center;
   width: 100%;
@@ -376,7 +376,7 @@ span.price {
 }
 
 .about-para {
-  font-size: 18px;
+  font-size: 16px;
   margin-bottom: 26px;
   letter-spacing: 1.5px;
   line-height: 1.4;
@@ -392,7 +392,8 @@ span.price {
 
 .about__sub-para .contact {
   font-size: 17px;
-  font-weight: 700;
+  font-weight: 900;
+  letter-spacing: 2px;
   margin-bottom: 6px;
 }
 
@@ -408,7 +409,7 @@ span.price {
 }
 
 .footer-head {
-  font-size: 15px;
+  font-size: 14px;
   margin-bottom: 5px;
 }
 
@@ -417,7 +418,7 @@ span.price {
 }
 
 .footer-sub {
-  font-size: 13px;
+  font-size: 12px;
 }
 
 /* Media Queries */
@@ -598,6 +599,7 @@ span.price {
   .products-collection {
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     grid-gap: 20px;
+    padding: 1rem;
   }
 
   span.price {
@@ -617,7 +619,8 @@ span.price {
     font-size: 36px;
   }
 
-  .about-para {
-    font-size: 16px;
+  .about-para,
+  .about__sub-para p {
+    font-size: 14px;
   }
 }
